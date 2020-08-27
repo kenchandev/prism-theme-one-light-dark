@@ -1,0 +1,40 @@
+.line-numbers {
+  @at-root
+  pre#{&} {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+  }
+
+  @at-root
+  pre#{&} > code {
+    position: relative;
+  }
+
+  & &-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em;
+    letter-spacing: -1px;
+    border-right: 0;
+
+    @include prefix(user-select, none, webkit moz ms);
+  }
+
+  &-rows > span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+
+    &:before {
+      content: counter(linenumber);
+      color: map-get($line-numbers, "number");
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+  }
+}

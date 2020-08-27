@@ -1,0 +1,34 @@
+{
+  "name": "prism-theme-one-light",
+  "version": "1.0.0",
+  "description": "Prism Theme - One Light and One Dark",
+  "scripts": {
+    "build": "npm-run-all build:light build:dark",
+    "build:light": "node-sass src/prism-onelight.scss -o dist/ --output-style compressed",
+    "build:dark": "node-sass src/prism-onedark.scss -o dist/ --output-style compressed"
+  },
+  "keywords": [
+    "Prism",
+    "theme",
+    "one",
+    "light",
+    "onelight",
+    "one-light",
+    "dark",
+    "onedark",
+    "one-dark"
+  ],
+  "author": "Ken A. Chan <kenchandev@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kenchandev/prism-theme-one-light-dark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kenchandev/prism-theme-one-light-dark/issues"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5"
+  }
+}

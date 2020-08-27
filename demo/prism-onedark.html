@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prism Demo - One Dark Theme</title>
+    <link rel="stylesheet" href="../dist/prism-onedark.css">
+</head>
+<body>
+  <!--
+    ██╗  ██╗████████╗███╗   ███╗██╗
+    ██║  ██║╚══██╔══╝████╗ ████║██║
+    ███████║   ██║   ██╔████╔██║██║
+    ██╔══██║   ██║   ██║╚██╔╝██║██║
+    ██║  ██║   ██║   ██║ ╚═╝ ██║███████╗
+    ╚═╝  ╚═╝   ╚═╝   ╚═╝     ╚═╝╚══════╝
+  -->
+
+  <h2 id="markup"><a href="#markup">HTML</a></h2>
+
+  <h3>Empty tag</h3>
+<pre class="language-markup"><code class="language-markup">&lt;p>&lt;/p></code></pre>
+
+  <h3>Tag that spans multiple lines</h3>
+<pre class="language-markup"><code class="language-markup">&lt;p>hello!&lt;/p></code></pre>
+
+  <h3>Name-attribute pair</h3>
+<pre class="language-markup"><code class="language-markup">&lt;p>&lt;/p></code></pre>
+
+  <h3>Name-attribute pair without quotes</h3>
+<pre class="language-markup"><code class="language-markup">&lt;p class=prism>&lt;/p></code></pre>
+
+  <h3>Attribute without value</h3>
+<pre class="language-markup"><code class="language-markup">&lt;p data-foo>&lt;/p>
+&lt;p data-foo >&lt;/p>
+</code></pre>
+
+  <h3>Namespaces</h3>
+<pre class="language-markup"><code class="language-markup">&lt;html:p foo:bar="baz" foo:weee>&lt;/html:p></code></pre>
+
+  <h3>XML prolog</h3>
+<pre class="language-markup"><code class="language-markup">&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;svg>&lt;/svg></code></pre>
+
+  <h3>DOCTYPE</h3>
+<pre class="language-markup"><code class="language-markup">&lt;!DOCTYPE html>
+&lt;html>&lt;/html></code></pre>
+
+  <h3>CDATA section</h3>
+<pre class="language-markup"><code class="language-markup">&lt;ns1:description>&lt;![CDATA[
+  CDATA is &lt;not> magical.
+]]>&lt;/ns1:description></code></pre>
+
+  <h3>Comment</h3>
+<pre class="language-markup"><code class="language-markup">&lt;!-- I'm a comment -->
+And i'm not</code></pre>
+
+  <h3>Entities</h3>
+<pre class="language-markup"><code class="language-markup">&amp;amp; &amp;#x2665; &amp;#160; &amp;#x152;</code></pre>
+
+  <h3>Embedded JS and CSS</h3>
+<pre class="language-markup"><code class="language-markup">&lt;!DOCTYPE html>
+&lt;html lang="en">
+  &lt;head>
+    &lt;meta charset="utf-8" />
+    &lt;title>I can haz embedded CSS and JS&lt;/title>
+    &lt;style>
+      @media print {
+        p { color: red !important; }
+      }
+    &lt;/style>
+  &lt;/head>
+  &lt;body>
+    &lt;h1>I can haz embedded CSS and JS&lt;/h1>
+    &lt;script>
+    if (true) {
+      console.log('foo');
+    }
+    &lt;/script>
+  &lt;/body>
+&lt;/html></code></pre>
+
+  <h3>Invalid HTML</h3>
+<pre class="language-markup"><code class="language-markup">&lt;l &lt;/ul></code></pre>
+
+  <h3>Multi-line attribute values</h3>
+<pre class="language-markup"><code class="language-markup">&lt;p title="foo
+bar
+baz"></code></pre>
+
+  <h3>XML tags with non-ASCII characters</h3>
+<pre class="language-markup"><code class="language-markup">&lt;Läufer&gt;foo&lt;/Läufer&gt;
+&lt;tag läufer="läufer"&gt;bar&lt;/tag&gt;
+&lt;läufer:tag&gt;baz&lt;/läufer:tag&gt;</code></pre>
+
+  <hr />
+
+  <!--
+    ███████╗ ██████╗███████╗███████╗
+    ██╔════╝██╔════╝██╔════╝██╔════╝
+    ███████╗██║     ███████╗███████╗
+    ╚════██║██║     ╚════██║╚════██║
+    ███████║╚██████╗███████║███████║
+    ╚══════╝ ╚═════╝╚══════╝╚══════╝
+  -->
+
+  <h2 id="scss"><a href="#scss">SCSS</a></h2>
+
+  <h3>Comments</h3>
+<pre class="language-scss"><code class="language-scss">// Single line comment
+/* Multi-line
+comment */</code></pre>
+
+  <h3>At-rules</h3>
+<pre class="language-scss"><code class="language-scss">@import "foo.scss";
+@media (min-width: 600px) {}
+.seriousError {
+  @extend .error;
+}
+@for $i from 1 through 3 {}
+</code></pre>
+
+  <h3>Compass URLs</h3>
+<pre class="language-scss"><code class="language-scss">@font-face {
+  font-family: "opensans";
+  src: font-url("opensans.ttf");
+}</code></pre>
+
+  <h3>Variables</h3>
+<pre class="language-scss"><code class="language-scss">$width: 5em;
+#main {
+  width: $width;
+}</code></pre>
+
+  <h3>Interpolations are highlighted in property names</h3>
+<pre class="language-scss"><code class="language-scss">p.#{$name} {
+  #{$attr}-color: blue;
+}
+</code></pre>
+
+  <hr />
+
+  <!--
+          ██╗ █████╗ ██╗   ██╗ █████╗ ███████╗ ██████╗██████╗ ██╗██████╗ ████████╗
+          ██║██╔══██╗██║   ██║██╔══██╗██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝
+          ██║███████║██║   ██║███████║███████╗██║     ██████╔╝██║██████╔╝   ██║
+    ██   ██║██╔══██║╚██╗ ██╔╝██╔══██║╚════██║██║     ██╔══██╗██║██╔═══╝    ██║
+    ╚█████╔╝██║  ██║ ╚████╔╝ ██║  ██║███████║╚██████╗██║  ██║██║██║        ██║
+      ╚════╝ ╚═╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝
+  -->
+
+  <h2 id="js"><a href="#js">JavaScript</a></h2>
+
+  <h3>Variable assignment</h3>
+<pre class="language-js"><code class="language-js">var foo = "bar", baz = 5;</code></pre>
+
+  <h3>Operators</h3>
+<pre class="language-js"><code class="language-js">(1 + 2 * 3) / 4 >= 3 &amp;&amp; 4 &lt; 5 || 6 > 7</code></pre>
+
+  <h3>Indented code</h3>
+<pre class="language-js"><code class="language-js">if (true) {
+  while (true) {
+    doSomething();
+  }
+}</code></pre>
+
+  <h3>Regex with slashes</h3>
+<pre class="language-js"><code class="language-js">var foo = /([^/])\/(\\?.|\[.+?])+?\/[gim]{0,3}/g;</code></pre>
+
+  <h3>Regex that ends with double slash</h3>
+<pre class="language-js"><code class="language-js">var bar = /\/\*[\w\W]*?\*\//g;</code></pre>
+
+  <h3>Single line comments &amp; regexes</h3>
+<pre class="language-js"><code class="language-js">// http://lea.verou.me
+var comment = /\/\*[\w\W]*?\*\//g;</code></pre>
+
+  <h3>Link in comment</h3>
+<pre class="language-js"><code class="language-js">// http://lea.verou.me
+/* http://lea.verou.me */</code></pre>
+
+  <h3>Nested strings</h3>
+<pre class="language-js"><code class="language-js">var foo = "foo", bar = "He \"said\" 'hi'!"</code></pre>
+
+  <h3>Strings inside comments</h3>
+<pre class="language-js"><code class="language-js">// "foo"
+/* "foo" */</code></pre>
+
+  <h3>Strings with slashes</h3>
+<pre class="language-js"><code class="language-js">env.content + '&lt;/' + env.tag + '>'
+var foo = "/" + "/";
+var foo = "http://prismjs.com"; // Strings are strings and comments are comments ;)</code></pre>
+
+  <h3>Regex inside single line comment</h3>
+<pre class="language-js"><code class="language-js">// hey, /this doesn’t fail!/ :D</code></pre>
+
+  <h3>Two or more division operators on the same line</h3>
+<pre class="language-js"><code class="language-js">var foo = 5 / 6 / 7;</code></pre>
+
+  <h3>A division operator on the same line as a regex</h3>
+<pre class="language-js"><code class="language-js">var foo = 1 / 2, bar = /a/g;
+var foo = /a/, bar = 3 / 4;</code></pre>
+
+  <h3>ES6 features</h3>
+<pre class="language-js"><code class="language-js">// Regex "y" and "u" flags
+var a = /[a-zA-Z]+/gimyu;
+
+// for..of loops
+for (let x of y) { }
+
+// Modules: import
+import { foo as bar } from "file.js"
+
+// Template strings
+`Only on ${ y } one line`
+`This template string ${ x } is on
+
+multiple lines.`
+`40 + 2 = ${ 40 + 2 }`
+`The squares of the first 3 natural integers are ${[for (x of [1, 2, 3]) x * x].join(', ')}`</code></pre>
+
+  <hr />
+
+  <!--
+  ████████╗██╗   ██╗██████╗ ███████╗███████╗ ██████╗██████╗ ██╗██████╗ ████████╗
+  ╚══██╔══╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔════╝██╔════╝██╔══██╗██║██╔══██╗╚══██╔══╝
+    ██║    ╚████╔╝ ██████╔╝█████╗  ███████╗██║     ██████╔╝██║██████╔╝   ██║
+    ██║     ╚██╔╝  ██╔═══╝ ██╔══╝  ╚════██║██║     ██╔══██╗██║██╔═══╝    ██║
+    ██║      ██║   ██║     ███████╗███████║╚██████╗██║  ██║██║██║        ██║
+    ╚═╝      ╚═╝   ╚═╝     ╚══════╝╚══════╝ ╚═════╝╚═╝  ╚═╝╚═╝╚═╝        ╚═╝
+  -->
+
+  <h2 id="ts"><a href="#ts">TypeScript</a></h2>
+
+<pre class="language-ts"><code class="language-ts">interface SearchFunc {
+  (source: string, subString: string): boolean;
+}
+
+var mySearch: SearchFunc;
+mySearch = function(source: string, subString: string) {
+  var result = source.search(subString);
+  if (result == -1) {
+    return false;
+  }
+  else {
+    return true;
+  }
+}
+
+class Greeter {
+  greeting: string;
+  constructor(message: string) {
+    this.greeting = message;
+  }
+  greet() {
+    return "Hello, " + this.greeting;
+  }
+}
+
+var greeter = new Greeter("world");
+</code></pre>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-markup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-scss.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/components/prism-typescript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.21.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+</body>
+</html>

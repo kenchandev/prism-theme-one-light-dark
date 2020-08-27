@@ -1,0 +1,13 @@
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+@import "variables-base";
+@import "variables-onedark";
+@import "mixins";
+@import "code";
+@import "tokens";
+@import "line-numbers";
+@import "overrides";

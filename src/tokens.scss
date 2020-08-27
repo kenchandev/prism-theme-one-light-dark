@@ -1,0 +1,68 @@
+.token {
+  &.comment,
+  &.prolog,
+  &.doctype,
+  &.cdata {
+    color: map-get($token-colors, "mono-1");
+  }
+
+  &.punctuation {
+    color: map-get($token-colors, "mono-2");
+  }
+
+  &.selector,
+  &.tag {
+    color: map-get($token-colors, "red-1");
+  }
+
+  &.property,
+  &.boolean,
+  &.number,
+  &.constant,
+  &.symbol,
+  &.attr-name,
+  &.deleted {
+    color: map-get($token-colors, "orange");
+  }
+
+  &.string,
+  &.char,
+  &.attr-value,
+  &.builtin,
+  &.inserted {
+    color: map-get($token-colors, "green");
+  }
+
+  &.operator,
+  &.entity,
+  &.url,
+  .language-css &.string,
+  .style &.string {
+    color: map-get($token-colors, "cyan");
+  }
+
+  &.function {
+    color: map-get($token-colors, "blue");
+  }
+
+  &.atrule,
+  &.keyword,
+  &.regex,
+  &.important,
+  &.variable {
+    color: map-get($token-colors, "purple");
+  }
+
+  &.important,
+  &.bold {
+    font-weight: bold;
+  }
+
+  &.italic {
+    font-style: italic;
+  }
+
+  &.entity {
+    cursor: help;
+  }
+}

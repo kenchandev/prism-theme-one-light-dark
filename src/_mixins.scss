@@ -1,0 +1,19 @@
+/**
+ * Prefix a property with vendor for backward compatibility.
+ * @param {String} $property - Property Name
+ * @param {*} $value - Property Value
+ * @param {List} $prefixes (()) - List of Prefixes to Print
+ * @example
+ *  prefix(user-select, none, webkit moz ms)
+ *  // -webkit-user-select: none;
+ *  // -moz-user-select: none;
+ *  // -ms-user-select: none;
+ *  // user-select: none;
+ */
+@mixin prefix($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $value;
+  }
+
+  #{$property}: $value;
+}

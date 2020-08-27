@@ -1,0 +1,6 @@
+@each $language in $override-fg-color-languages {
+  code.language-#{$language},
+  pre.language#{$language} {
+    color: map-get($token-colors, "red-2");
+  }
+}

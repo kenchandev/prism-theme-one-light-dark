@@ -1,0 +1,61 @@
+[class*="language-"] {
+  @at-root
+  code#{&},
+  pre#{&} {
+    color: map-get($code, "foreground");
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    @include prefix(tab-size, 4, moz o);
+    @include prefix(hyphens, none, webkit moz ms);
+  }
+
+  @at-root
+  pre#{&}::selection,
+  pre#{&} ::selection,
+  code#{&}::selection,
+  code#{&} ::selection,
+  pre#{&}::-moz-selection,
+  pre#{&} ::-moz-selection,
+  code#{&}::-moz-selection,
+  code#{&} ::-moz-selection {
+    text-shadow: none;
+    background: map-get($code, "selection");
+  }
+
+  @media print {
+    @at-root
+    code#{&},
+    pre#{&} {
+      text-shadow: none;
+    }
+  }
+
+  /* Code Blocks */
+  @at-root
+  pre#{&} {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+  }
+
+  @at-root
+  :not(pre) > code#{&},
+  pre#{&} {
+    background: map-get($code, "background");
+  }
+
+  /* Inline Code */
+  @at-root
+  :not(pre) > code#{&} {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+  }
+}
