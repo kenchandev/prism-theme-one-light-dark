@@ -8,12 +8,53 @@ This package provides light and dark themes based on Atom's [One Light](https://
 
 *Note*: Due to some limitations of Prism's syntax highlighting, there will be slight differences in syntax highlighting between these themes and the originals provided by Atom.
 
+## Installation
+
+```bash
+$ npm install --save prism-theme-one-light-dark
+```
+
+If the web application uses the Webpack loaders `style-loader` and `css-loader`, then the themes can be imported like a module.
+
+Import One Dark theme.
+
+```js
+import 'prism-theme-one-light-dark/prism-onedark.css';
+```
+
+Import One Light theme.
+
+```js
+import 'prism-theme-one-light-dark/prism-onelight.css';
+```
+
+## Toggle Between Themes (Webpack-Based Projects)
+
+If the web application supports toggling between light and dark themes, then to inject the corresponding Prism theme, use [`raw-loader`](https://webpack.js.org/loaders/raw-loader/), a Webpack loader for importing a file as a raw text string.
+
+*Note*: Since Webpack is one of the core software packages that powers Gatsby, Gatsby automatically provides `raw-loader` to developers.
+
+```js
+// Assumption: `theme` argument can only be set to "dark" or "light."
+function togglePrismTheme(theme) {
+  let prismTheme;
+
+  try {
+    prismTheme = require(`!raw-loader!prism-theme-one-light-dark/prism-one${theme}.css`); 
+  } catch(e) {
+    console.error(e);
+  }
+
+  return prismTheme;
+}
+```
+
 ## Customization
 
 To customize the themes:
 
 1. Fork this repository [here](https://github.com/kenchandev/prism-theme-one-light-dark/fork).
-2. Place custom SCSS code in `src/overrides.scss`.
+2. Place the custom SCSS code in `src/overrides.scss`.
 3. Execute `npm run build` to generate the customized themes.
 
 ## Preview
