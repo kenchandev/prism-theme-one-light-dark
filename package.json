@@ -1,11 +1,13 @@
 {
-  "name": "prism-theme-one-light",
-  "version": "1.0.0",
+  "name": "prism-theme-one-light-dark",
+  "version": "1.0.2",
   "description": "Prism Theme - One Light and One Dark",
   "scripts": {
     "build": "npm-run-all build:light build:dark",
     "build:light": "node-sass src/prism-onelight.scss -o dist/ --output-style compressed",
-    "build:dark": "node-sass src/prism-onedark.scss -o dist/ --output-style compressed"
+    "build:dark": "node-sass src/prism-onedark.scss -o dist/ --output-style compressed",
+    "prepublishOnly": "cp -r ./dist/* .",
+    "postpublish": "git clean -fd"
   },
   "keywords": [
     "Prism",
