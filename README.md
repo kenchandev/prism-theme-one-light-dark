@@ -14,7 +14,7 @@ This package provides light and dark themes based on Atom's [One Light](https://
 $ npm install --save prism-theme-one-light-dark
 ```
 
-If the web application uses the Webpack loaders `style-loader` and `css-loader`, then the themes can be imported like a module.
+If the web application uses the Webpack loaders [`style-loader`](https://webpack.js.org/loaders/style-loader/) and [`css-loader`](https://webpack.js.org/loaders/css-loader/), then the themes can be imported like a module.
 
 Import One Dark theme.
 
