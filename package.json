@@ -1,6 +1,6 @@
 {
   "name": "prism-theme-one-light-dark",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Prism Theme - One Light and One Dark",
   "scripts": {
     "build": "npm-run-all build:light build:dark",
