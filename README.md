@@ -65,7 +65,7 @@ For additional previews of other code snippets (Markup, SCSS and JavaScript), do
 
 ### TypeScript
 
-![One Light Theme - TypeScript Preview](https://www.dl.dropboxusercontent.com/s/t4058tep40c690j/Screen%20Shot%202020-08-26%20at%2010.55.08%20PM.png)
+![One Light Theme - TypeScript Preview](https://www.dl.dropboxusercontent.com/s/hcb77fnxim1th3b/screen%20shot%202020-10-17%20at%2011.12.12%20pm.png)
 
 ![One Dark Theme - TypeScript Preview](https://www.dl.dropboxusercontent.com/s/8vbqbskp3sgyu83/Screen%20Shot%202020-08-26%20at%2010.56.12%20PM.png)
 

@@ -49,6 +49,7 @@
   :not(pre) > code#{&},
   pre#{&} {
     background: map-get($code, "background");
+    border: 1px solid map-get($code, "border");
   }
 
   /* Inline Code */
